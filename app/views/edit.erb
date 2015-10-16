@@ -1,0 +1,14 @@
+<form action="/robots/<%= @robot.id %>" method="POST" class="container" style="padding-top: 12px">
+  <h3>Edit Robot Information:</h3>
+  <input type="hidden" name="_method" value="PUT">
+  <input type='text' name='robot[name]' value= '<%=@robot.name%>'/><br/><br/>
+  <input type='text' name='robot[city]' value='<%=@robot.city%>'/><br/><br/>
+  <input type='text' name='robot[state]' value='<%=@robot.state%>'/><br/><br/>
+  <input type='text' name='robot[avatar]' value='<%=@robot.avatar%>'/><br/><br/>
+  <input type='text' name='robot[birthdate]' value='<%=@robot.birthdate%>'/><br/><br/>
+  <input type='text' name='robot[date_hired]' value='<%=@robot.date_hired%>'/><br/><br/>
+  <input type='text' name='robot[department]' value='<%=@robot.department%>'/><br/><br/>
+
+
+  <input type='submit' class="btn btn-warning" value="Submit"/>
+</form>

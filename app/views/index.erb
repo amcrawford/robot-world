@@ -1,0 +1,15 @@
+<div class="container" id="greeting">
+  <h1>Meet Our Robots</h1>
+</div>
+<div class="container" style="margin-left: 24px" id="robot_list">
+  <% @robots.each do |robot| %>
+  <div class="col-md-3 col-md-offset-1">
+    <h3 style="text-align: center"><a href="/robots/<%= robot.id %>" style="color: black" id="#{robot.name}"><%= robot.name %></a></h3>
+    <div id="robot_pic">
+      <img class="robot_logos" src='<%= robot.avatar %>' alt='photo'></br>
+    </div>
+  </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,13 @@
+require_relative '../test_helper'
+require 'tilt/erb'
+
+class TestGreetingTest < FeatureTest
+  def test_user_can_see_the_greeting
+    skip
+    visit '/'
+    within("#greeting") do
+      assert page.has_content?("Welcome to Robot World")
+    end
+  end
+
+end

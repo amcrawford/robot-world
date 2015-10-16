@@ -1,0 +1,40 @@
+<div class="container" style="margin-bottom: 24px">
+  <h1><%= @robot.name %></h1>
+  <div class="rows">
+    <div class="col-md-6">
+      <img src='<%= @robot.avatar %>' alt='photo'>
+    </div>
+    <div class="col-md-2">
+      <div>
+        <h4>Location:</h4>
+        <%= @robot.city %>, <%= @robot.state %>
+      </div>
+      <div>
+        <h4>Birthday:</h4>
+        <%= @robot.birthdate %>
+      </div>
+      <div>
+        <h4>Age:</h4>
+        <%= @robot.age %>
+      </div>
+      <div>
+        <h4>Date Hired:</h4>
+        <%= @robot.date_hired %>
+      </div>
+      <div>
+        <h4>Department:</h4>
+        <%= @robot.department %>
+      </div>
+    </div>
+
+</div>
+
+
+</div>
+<div class="container">
+  <a href="/robots/<%=@robot.id%>/edit" class="btn btn-warning">Edit</a>
+  <form action="/robot/<%= @robot.id %>" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="btn btn-warning" value="Delete"/>
+  </form>
+</div>

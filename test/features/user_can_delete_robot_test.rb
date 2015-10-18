@@ -7,7 +7,8 @@ class DeleteRobotTest < FeatureTest
                       :avatar => "http://robohash.org/three", :birthdate => "10/14/2015",
                       :date_hired => "10/14/2015", :department => "This"})
     assert_equal 1, RobotManager.all.length
-    visit '/robots/1'
+    visit '/robots'
+    click_link("#{RobotManager.all.first.name}")
     click_button("Delete")
     assert_equal "/robots", current_path
     assert_equal 0, RobotManager.all.length

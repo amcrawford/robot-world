@@ -1,8 +1,8 @@
-require_relative '../models/robot_manager'
-require_relative '../models/analytics'
+require_relative '../models/robot_manager'  # => true
+require_relative '../models/analytics'      # => true
 
 
-class RobotWorldApp < Sinatra::Base
+class RobotWorldApp < Sinatra::Base           # ~> NameError: uninitialized constant Sinatra
   set :root, File.expand_path("..", __dir__)
   set :method_override, true
 
@@ -51,3 +51,8 @@ class RobotWorldApp < Sinatra::Base
   end
 
 end
+
+# ~> NameError
+# ~> uninitialized constant Sinatra
+# ~>
+# ~> /Users/ambercrawford/turing/module_two/robot_world/app/controllers/robot_world_app.rb:5:in `<main>'

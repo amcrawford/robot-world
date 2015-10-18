@@ -3,7 +3,7 @@ require_relative '../test_helper'
 class TestTaskManager < Minitest::Test
   def create_robots(num)
     num.times do |num|
-      RobotManager.create({:id => "#{num+1}", :name => "#{num+1}", :city => "Baltimore", :state => "MD",
+      RobotManager.create({:name => "#{num+1}", :city => "Baltimore", :state => "MD",
                         :avatar => "http://robohash.org/three", :birthdate => "10/14/2015",
                         :date_hired => "10/14/2015", :department => "This"})
       end

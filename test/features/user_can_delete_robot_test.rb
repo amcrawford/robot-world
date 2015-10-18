@@ -3,8 +3,7 @@ require 'tilt/erb'
 
 class DeleteRobotTest < FeatureTest
   def test_user_can_delete_a_robot
-    skip
-    RobotManager.create({:id => "1", :name => "1", :city => "Baltimore", :state => "MD",
+    RobotManager.create({:name => "1", :city => "Baltimore", :state => "MD",
                       :avatar => "http://robohash.org/three", :birthdate => "10/14/2015",
                       :date_hired => "10/14/2015", :department => "This"})
     assert_equal 1, RobotManager.all.length

@@ -3,7 +3,6 @@ require 'tilt/erb'
 
 class CreateRobotTest < FeatureTest
   def test_user_can_submit_new_robot
-    skip
     visit '/robots/new'
       assert_equal "/robots/new", current_path
 
